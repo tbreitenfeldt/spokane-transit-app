@@ -1,0 +1,26 @@
+
+header {
+  padding: 154px 0 100px;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 100px 0 50px;
+	
+  }
+}
+
+section.bg-dark {
+	color: lightblue;
+}	
+
+body, html, section, .container-fluid{
+	background-color: lightblue;
+	height: 500px;
+	padding: 0 40px;
+}
+
+section{
+	padding: 10px;
+	overflow: auto;
+}

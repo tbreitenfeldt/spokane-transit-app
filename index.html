@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>STA Rider</title>
+
+	<script  src="//code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="  crossorigin="anonymous"></script>
+	<script src="sta.js"></script>
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+	
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+	<style>
+	  .marker {
+	  background-image: url('location.png');
+	  background-size: cover;
+	  width: 50px;
+	  height: 50px;
+	  border-radius: 50%;
+	  cursor: pointer;
+	}
+	</style>
+	
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav" >
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" ><img src="logo.png" alt="staLogo" height="40" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#stopId">Enter Stop Code</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#upcomingBusses">Upcoming Busses</a>
+            </li>
+ 
+				<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h1>Spokane Transit Authority Bus Rider App</h1>
+        <p class="lead">This app will help you find the nearest bus stops in Spokane!</p>
+      </div>
+    </header>
+
+	<section id="stopId" class="bg-dark" style="width: auto; height: auto; max-height: 120%">
+      <div class="container" style="text-align: center;">
+		<h1>Enter Your 4-Digit Stop Code Here</h1>
+        <div class="row" >
+            <div id="stopSelectionRegion" style="text-align: center; margin: auto">
+				<div id="errorRegion" aria-live="polite"></div>
+				<label for="stopIDTextbox">Stop Code</lable>
+				<input type="text" id="stopIDTextbox">
+				<input type="button" id="allRoutsButton" value="All Routes">
+				<input type="button" id="clearResultsButton" value="Clear Results">
+				<div><a href="https://www.spokanetransit.com/ride-sta/text-your-stop">What is a 4-Digit Stop Code?</a></div>
+				<div id="routesForStopHeaderRegion" aria-live="polite"></div>
+				<div id="busButtonsRegion"></div>
+				<div id="busScheduleRegion"></div>
+			  </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="upcomingBusses" class="bg-primary text-white" style="height: auto">
+      <div class="container" style="text-align:center"><h2>Upcoming Busses Near You</h2>
+        <div class="row" >
+			<div class="col-lg-8 mx-auto" id="upcomingBusRegion"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark" id="map" style="padding: 0">
+      <div class="container" >
+        <div class="row" >
+          <div class="map" ></div>
+        </div>
+		
+      </div>
+    </section>
+	
+	<section class=" bg-dark" id="about" style="height:40%" >
+      <div class="container">
+	  <h2 class="text-center">About</h2>
+	  <p class="m-0 text-center">CSCD 378 Final Project</p>
+        <p class="m-0 text-center">Roxanne's Code Ninjas:</p>
+		<p class="m-0 text-center ">TJ Breitenfeldt</p>
+		<p class="m-0 text-center">Tatyana (Tatsi) Hubbard</p>
+		<p class="m-0 text-center">Andrew Bosco</p>
+      </div>
+      <!-- /.container -->
+    </section>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+
+  </body>
+
+</html>
